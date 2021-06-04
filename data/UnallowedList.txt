@@ -1,0 +1,5 @@
+iexplore
+notepad
+chrome
+KakaoTalk
+cmd

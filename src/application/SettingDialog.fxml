@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="650.0" style="-fx-background-color: #E3EEF1; -fx-border-style: solid; -fx-border-color: gray; -fx-border-width: 1px;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SettingDialogController">
+   <children>
+      <Button fx:id="finishBtn" layoutX="482.0" layoutY="250.0" mnemonicParsing="false" prefWidth="70.0" text="finish" />
+      <GridPane layoutX="32.0" layoutY="43.0" prefHeight="80.0" prefWidth="606.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="145.60003662109375" minWidth="10.0" prefWidth="95.60001220703126" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.1999877929687" minWidth="10.0" prefWidth="363.1999877929687" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="132.20001220703125" minWidth="10.0" prefWidth="85.40003662109376" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="60.8" minHeight="10.0" prefHeight="41.399993896484375" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="52.000006103515624" minHeight="0.0" prefHeight="41.40000610351562" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="searchBtn" mnemonicParsing="false" prefWidth="70.0" text="search" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin></Button>
+            <TextField GridPane.columnIndex="1" fx:id="xmlFileTextField" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="xml file">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin></Text>
+            <TextField fx:id="brokerIPTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="broker IP" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="10.0" />
+               </GridPane.margin></Text>
+         </children>
+      </GridPane>
+      <StackPane layoutX="10.0" layoutY="139.0" prefHeight="110.0" prefWidth="630.0">
+         <children>
+            <VBox fx:id="defaultGroupPane" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #E3EEF1;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Text>
+                  <GridPane prefHeight="80.0" prefWidth="458.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox fx:id="twoGroupPane" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #E3EEF1;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select group ID">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Text>
+                  <GridPane prefHeight="80.0" prefWidth="458.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" prefHeight="60.0" prefWidth="190.0">
+                           <children>
+                              <Text fx:id="twoGroupFirstName" strokeType="OUTSIDE" strokeWidth="0.0" text="name1">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="twoGroupFirstCombo" prefWidth="150.0" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets right="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Text fx:id="twoGroupSecondName" strokeType="OUTSIDE" strokeWidth="0.0" text="name2">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="twoGroupSecondCombo" prefWidth="150.0" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox fx:id="fourGroupPane" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #E3EEF1;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select group ID">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Text>
+                  <GridPane prefHeight="80.0" prefWidth="575.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" prefHeight="60.0" prefWidth="190.0">
+                           <children>
+                              <Text fx:id="fourGroupFirstName" strokeType="OUTSIDE" strokeWidth="0.0" text="name1">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="fourGroupFirstCombo" prefWidth="150.0" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Text fx:id="fourGroupSecondName" strokeType="OUTSIDE" strokeWidth="0.0" text="name2">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="fourGroupSecondCombo" prefWidth="150.0" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="60.0" prefWidth="288.0" GridPane.rowIndex="1">
+                           <children>
+                              <Text fx:id="fourGroupThirdName" strokeType="OUTSIDE" strokeWidth="0.0" text="name3">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="fourGroupThirdCombo" prefWidth="150.0" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="60.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Text fx:id="fourGroupFourthName" strokeType="OUTSIDE" strokeWidth="0.0" text="name4">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="fourGroupFourthCombo" prefWidth="150.0" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox fx:id="oneGroupPane" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #E3EEF1;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select group ID">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Text>
+                  <GridPane prefHeight="80.0" prefWidth="458.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <HBox prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <Text fx:id="oneGroupFirstName" strokeType="OUTSIDE" strokeWidth="0.0" text="name1">
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="oneGroupFirstCombo" prefWidth="150.0" />
+                           </children>
+                           <padding>
+                              <Insets left="60.0" />
+                           </padding>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox fx:id="threeGroupPane" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #E3EEF1;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select group ID">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Text>
+                  <GridPane prefHeight="80.0" prefWidth="510.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" prefHeight="60.0" prefWidth="190.0">
+                           <children>
+                              <Text fx:id="threeGroupFirstName" strokeType="OUTSIDE" strokeWidth="0.0" text="name1">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="threeGroupFirstCombo" prefWidth="150.0" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Text fx:id="threeGroupSecondName" strokeType="OUTSIDE" strokeWidth="0.0" text="name2">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="threeGroupSecondCombo" prefWidth="150.0" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <Text fx:id="threeGroupThirdName" strokeType="OUTSIDE" strokeWidth="0.0" text="name3">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="threeGroupThirdCombo" prefWidth="150.0" />
+                           </children>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox fx:id="fiveGroupPane" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #E3EEF1;">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Select group ID">
+                     <VBox.margin>
+                        <Insets left="50.0" />
+                     </VBox.margin>
+                  </Text>
+                  <GridPane prefHeight="80.0" prefWidth="510.0">
+                     <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                     </columnConstraints>
+                     <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                     </rowConstraints>
+                     <children>
+                        <HBox alignment="TOP_RIGHT" prefHeight="60.0" prefWidth="190.0">
+                           <children>
+                              <Text fx:id="fiveGroupFirstName" strokeType="OUTSIDE" strokeWidth="0.0" text="name1">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="fiveGroupFirstCombo" prefWidth="150.0" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Text fx:id="fiveGroupSecondName" strokeType="OUTSIDE" strokeWidth="0.0" text="name2">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="fiveGroupSecondCombo" prefWidth="150.0" />
+                           </children>
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                        <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <Text fx:id="fiveGroupThirdName" strokeType="OUTSIDE" strokeWidth="0.0" text="name3">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="fiveGroupThirdCombo" prefWidth="150.0" />
+                           </children>
+                           <padding>
+                              <Insets right="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="TOP_RIGHT" prefHeight="60.0" prefWidth="190.0" GridPane.rowIndex="1">
+                           <children>
+                              <Text fx:id="fiveGroupFourthName" strokeType="OUTSIDE" strokeWidth="0.0" text="name4">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="fiveGroupFourthCombo" prefWidth="150.0" />
+                           </children>
+                           <padding>
+                              <Insets left="20.0" />
+                           </padding>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="60.0" prefWidth="190.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <Text fx:id="fiveGroupFifthName" strokeType="OUTSIDE" strokeWidth="0.0" text="name5">
+                                 <HBox.margin>
+                                    <Insets right="5.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <ComboBox fx:id="fiveGroupFifthCombo" prefWidth="150.0" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                  </GridPane>
+               </children>
+            </VBox>
+         </children>
+      </StackPane>
+      <Button fx:id="cancelBtn" layoutX="565.0" layoutY="250.0" mnemonicParsing="false" prefWidth="70.0" text="cancel" />
+   </children>
+</AnchorPane>

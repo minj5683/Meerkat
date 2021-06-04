@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="600.0" style="-fx-background-color: #E3EEF1;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.DetailsTableDialogController">
+   <children>
+      <TabPane fx:id="tabPane" layoutX="10.0" layoutY="8.0" prefHeight="234.0" prefWidth="580.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="8.0">
+        <tabs>
+          <Tab text="생성 목록">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <ScrollPane prefHeight="202.0" prefWidth="590.0">
+                           <content>
+                              <TableView fx:id="creationTable" prefHeight="202.0" prefWidth="590.0">
+                                 <columns>
+                                    <TableColumn fx:id="creationNum" prefWidth="60.0" text="번호" />
+                                    <TableColumn fx:id="creationProcessName" prefWidth="220.0" text="프로세스 이름" />
+                                    <TableColumn fx:id="creationTime" prefWidth="310.0" text="시간" />
+                                 </columns>
+                              </TableView>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="deletionTab" text="종료 목록">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0">
+                     <children>
+                        <ScrollPane prefHeight="202.0" prefWidth="590.0">
+                           <content>
+                              <TableView fx:id="deletionTable" prefHeight="206.0" prefWidth="589.0">
+                                 <columns>
+                                    <TableColumn fx:id="deletionNum" prefWidth="60.0" text="번호" />
+                                    <TableColumn fx:id="deletionProcessName" prefWidth="220.0" text="프로세스 이름" />
+                                    <TableColumn fx:id="deletionTime" prefWidth="310.0" text="시간" />
+                                 </columns>
+                              </TableView>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
